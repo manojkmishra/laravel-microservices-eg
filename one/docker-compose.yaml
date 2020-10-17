@@ -11,6 +11,9 @@ services:
         
     admin_db:
         image: mysql:5.7.22
+        container_name: mysql
+        restart: unless-stopped
+        tty: true
         environment:
             MYSQL_DATABASE: admin
             MYSQL_USER: root
@@ -19,4 +22,4 @@ services:
         volumes:
             - ./storage/dbdata:/var/lib/mysql
         ports:
-            - 33063:3306
+            - "33063:3306"
