@@ -13,7 +13,7 @@ services:
         
     admin_db:
         image: mysql:5.7.22
-        container_name: mysql
+        #container_name: mysql
         restart: unless-stopped
         tty: true
         environment:
